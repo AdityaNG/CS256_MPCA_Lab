@@ -1,0 +1,166 @@
+
+<!-- saved from url=(0063)http://www.ecs.umass.edu/ece/koren/architecture/windlx/top.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script language="JavaScript" src="./top.js">
+</script>
+</head>
+
+<body onload="Page_Load_Complete();" onunload="CloseHelp();">
+
+<table border="0" align="center">
+	<tbody><tr>
+	
+	<td rowspan="3"> 
+	<form name="execution_time_table" style="margin-bottom:0;">
+	<table border="1" valign="middle">
+		<tbody><tr align="center">
+		<td>
+		Instruction
+		</td>
+		<td>
+		Execution Cycles
+		</td>
+		</tr>
+
+		<tr align="center">
+		<td>
+		FP_Add/Sub
+		</td>
+		<td>
+		<select name="fp_add_sub_new" onchange="Change_Execution_Time(fp_add, this.options[this.selectedIndex].value); Change_Execution_Time(fp_sub, 		this.options[this.selectedIndex].value);">
+		<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option></select>
+		</td>
+		</tr>
+
+		<tr align="center">
+		<td>
+		FP_Multiply
+		</td>
+		<td>
+		<select name="fp_mult_new" onchange="Change_Execution_Time(fp_mult, this.options[this.selectedIndex].value);">
+		<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option></select>
+		</td>
+		</tr>
+
+		<tr align="center">
+		<td>
+		FP_Divide
+		</td>
+		<td>
+		<select name="fp_div_new" onchange="Change_Execution_Time(fp_div, this.options[this.selectedIndex].value);">
+		<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option></select>
+		</td>
+		</tr>
+
+		<tr align="center">
+		<td>
+		INT_Divide
+		</td>
+		<td>
+		<select name="int_div_new" onchange="Change_Execution_Time(int_div, this.options[this.selectedIndex].value);">
+		<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option></select>
+		</td>
+		</tr>
+	</tbody></table>
+	</form>
+	</td>
+
+	<td width="10%" rowspan="3">
+	&nbsp;
+	</td>
+
+	
+	<td valign="middle" align="right">
+	<form name="insert_instruction_table">
+	<table align="right" border="0" width="100%">
+		<tbody><tr>
+		<td>
+		<select name="operator" onchange="Change_Add_Instruction();">
+		<option value="fp_add">FP_Add
+		</option><option value="fp_sub">FP_Subtract
+		</option><option value="fp_mult">FP_Multiply
+		</option><option value="fp_div">FP_Divide
+		</option><option value="fp_ld">FP_Load
+		</option><option value="fp_sd">FP_Store
+		</option><option value="int_add">INT_Add
+		</option><option value="int_sub">INT_Subtract
+		</option><option value="int_mult">INT_Multiply
+		</option><option value="int_div">INT_Divide
+		</option><option value="int_ld">INT_Load
+		</option><option value="int_sd">INT_Store
+		</option><option value="br_taken">Br_Taken
+		</option><option value="br_untaken">Br_Untaken
+		</option></select>
+		</td>
+		
+		<td>
+		<select name="destination_register">
+		<option value="R1">R1</option><option value="R2">R2</option><option value="R3">R3</option><option value="R4">R4</option><option value="R5">R5</option><option value="R6">R6</option><option value="R7">R7</option><option value="R8">R8</option><option value="R9">R9</option><option value="R10">R10</option><option value="R11">R11</option><option value="R12">R12</option><option value="R13">R13</option><option value="R14">R14</option><option value="R15">R15</option><option value="R16">R16</option><option value="R17">R17</option><option value="R18">R18</option><option value="R19">R19</option><option value="R20">R20</option><option value="R21">R21</option><option value="R22">R22</option><option value="R23">R23</option><option value="R24">R24</option><option value="R25">R25</option><option value="R26">R26</option><option value="R27">R27</option><option value="R28">R28</option><option value="R29">R29</option><option value="R30">R30</option><option value="R31">R31</option><option value="R32">R32</option></select>
+		</td>	
+
+		<td>
+		<select name="source_register1">
+		<option value="R1">R1</option><option value="R2">R2</option><option value="R3">R3</option><option value="R4">R4</option><option value="R5">R5</option><option value="R6">R6</option><option value="R7">R7</option><option value="R8">R8</option><option value="R9">R9</option><option value="R10">R10</option><option value="R11">R11</option><option value="R12">R12</option><option value="R13">R13</option><option value="R14">R14</option><option value="R15">R15</option><option value="R16">R16</option><option value="R17">R17</option><option value="R18">R18</option><option value="R19">R19</option><option value="R20">R20</option><option value="R21">R21</option><option value="R22">R22</option><option value="R23">R23</option><option value="R24">R24</option><option value="R25">R25</option><option value="R26">R26</option><option value="R27">R27</option><option value="R28">R28</option><option value="R29">R29</option><option value="R30">R30</option><option value="R31">R31</option><option value="R32">R32</option></select>
+		</td>		
+
+		<td>
+		<select name="source_register2">
+		<option value="R1">R1</option><option value="R2">R2</option><option value="R3">R3</option><option value="R4">R4</option><option value="R5">R5</option><option value="R6">R6</option><option value="R7">R7</option><option value="R8">R8</option><option value="R9">R9</option><option value="R10">R10</option><option value="R11">R11</option><option value="R12">R12</option><option value="R13">R13</option><option value="R14">R14</option><option value="R15">R15</option><option value="R16">R16</option><option value="R17">R17</option><option value="R18">R18</option><option value="R19">R19</option><option value="R20">R20</option><option value="R21">R21</option><option value="R22">R22</option><option value="R23">R23</option><option value="R24">R24</option><option value="R25">R25</option><option value="R26">R26</option><option value="R27">R27</option><option value="R28">R28</option><option value="R29">R29</option><option value="R30">R30</option><option value="R31">R31</option><option value="R32">R32</option></select>
+		</td>	
+
+		<td align="right">
+		<input type="button" width="185" value="   Insert Instruction    " onclick="Instruction_Insert();">
+		</td>
+		</tr>
+	</tbody></table>
+	</form>
+	</td>
+
+	<td width="10%" rowspan="3">
+	&nbsp;
+	</td>
+
+	</tr>
+
+	<tr>
+	<td align="right" valign="middle">
+	<form name="forwarding_form">
+	<table width="100%" align="right" border="0">
+		<tbody><tr>
+		<td align="center">
+		<input name="enabled_checkbox" type="checkbox" onclick="UpdateDisplay();">
+		Data Forwarding
+		</td>
+
+		<td align="right">
+		<input type="button" width="185" value="Remove Instruction" onclick="RemoveLastInstruction();">
+		</td>
+		</tr>
+	</tbody></table>
+	</form>
+	</td>
+	</tr>
+
+	<tr>
+	<td valign="middle" align="right">
+	<form>
+	<table width="100%" align="right" border="0">
+		<tbody><tr>
+		<td align="center">
+		<input type="button" value="Help" onclick="OpenHelp();">
+		</td>
+
+		<td align="right">
+		<input type="button" width="185" value=" Reset Application  " onclick="parent.location.href=&#39;main.html&#39;;">
+		</td>
+		</tr>
+	</tbody></table>
+	</form>
+	</td>
+	</tr>
+
+	
+</tbody></table>
+
+
+</body></html>
